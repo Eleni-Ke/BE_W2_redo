@@ -14,7 +14,8 @@ import filesRouter from "./api/files/index.js";
 import { join } from "path";
 
 const server = Express();
-const port = 3001;
+const port = process.env.PORT || 3001;
+console.log(process.env.PORT);
 
 const publicFolderPath = join(process.cwd(), "./public");
 
